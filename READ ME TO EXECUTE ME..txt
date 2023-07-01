@@ -1,0 +1,17 @@
+STEP 1. DOWNLOAD THE FILE
+STEP 2. INSTALL NODE.JS, VISUAL STUDIO CODE
+STEP 3. BE CONNECTED TO THE INTERNET
+STEP 4. OPEN THE FILE'S FOLDER IN VISUAL STUDIO CODE
+step 5. LOCATE terminal and type the following commands
+i. npm install -g@angular/cli
+ii. ng new employee-managment-app
+iii. cd employee-managment-app
+iv. npm install bootstrap
+v. ng generate service employee
+vi. ng generate component employee
+vii. ng service
+STEP 6. when the above steps are sucessful, it will give you a URL in my case, "http://localhost:4200/ **" 
+STEP 7. TYPE THIS "localhost/task/index.html on the browser
+STEP 8. YOU CAN CREATE, VIEW, EDIT AND DELETE. 
+
+THANKS BY DAKUM IBRAHIM

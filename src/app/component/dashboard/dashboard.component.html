@@ -1,0 +1,139 @@
+<div class="container-fluid">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Employee Management System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <button class="btn btn-outline-success" type="submit" data-bs-toggle="modal" data-bs-target="#addEmployee">Add Employee</button>
+        </div>
+      </div>
+    </nav>
+
+</div>
+<!-- Add Employee Modal -->
+<button type="button" class="btn btn-primary">
+  Dakum's Task. Yes I Can!!
+</button>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      
+      <th scope="col">EMPPOYEE ID</th>
+      <th scope="col">NAME</th>
+      <th scope="col">POSITION</th>
+      <th scope="col">ACTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      
+      <td>1</td>
+      <td>REV./DR AMOS Mozho</td>
+      <td>COCIN PRESIDENT</td>
+      <td>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#editEmployee" (click)="addEmployee()" >EDIT</button>
+              <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" >DELETE</button>
+            </div>   
+      </td>
+</tr>
+<tr>
+      
+  <td>2</td>
+  <td>DAKUM IBRAHIM</td>
+  <td>ICT COCIN HQTR</td>
+  <td>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#editEmployee" (click)="addEmployee()" >EDIT</button>
+          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" >DELETE</button>
+        </div>   
+  </td>
+</tr>
+<tr>
+      
+  <td>3</td>
+  <td>REV. AVURUMDA ILIYA</td>
+  <td>VICE CHAIRMAN RCC WARARI</td>
+  <td>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#editEmployee" (click)="addEmployee()" >EDIT</button>
+          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" >DELETE</button>
+        </div>   
+  </td>
+</tr>
+  </tbody>
+</table>
+
+<div class="modal fade" id="addEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">ADD A NEW EMPLOYEE</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      
+            <form [formGroup]="empDetail">
+              <div class="mb-3">
+                  <label for="EmployeeId" class="form-label">Employee ID</label>
+                  <input type="text" formControlName="employeeid" class="form-control" id="employeeid" aria-describedby="emailHelp">
+                </div>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" formControlName="name" class="form-control" id="name" aria-describedby="emailHelp">
+              </div>
+                <div class="mb-3">
+                  <label for="Position" class="form-label">Position</label>
+                  <input type="text" formControlName="postn" class="form-control" id="postn" aria-describedby="emailHelp">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-outline-success" (click)="updateEmployee()" data-bs-dismiss="modal">Add Employee</button>
+                </div>
+            </form>
+        
+          </div></div> </div>
+        </div>
+          
+
+
+
+<!-- Edit Employee Modal -->
+<div class="modal fade" id="editEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Edit Employee Details</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-body">
+       
+        <form [formGroup]="empDetail">
+            <div class="mb-3">
+                <label for="EmployeeId" class="form-label">Employee ID</label>
+                <input type="text" formControlName="employeeid" class="form-control" id="employeeid" aria-describedby="emailHelp">
+              </div>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" formControlName="name" class="form-control" id="name" aria-describedby="emailHelp">
+            </div>
+              <div class="mb-3">
+                <label for="Position" class="form-label">Position</label>
+                <input type="text" formControlName="postn" class="form-control" id="postn" aria-describedby="emailHelp">
+              </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-outline-success" (click)="updateEmployee()" data-bs-dismiss="modal">Update</button>
+        </div>
+          </form>
+
+    </div>
+  </div>
+</div>
+</div>
+</div>
